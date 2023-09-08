@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+    <h1>Upload a File</h1>
+    <form action="http://127.0.0.1:5000/uploads" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    <h1>Download a File</h1>
+    <!-- Button to trigger the download -->
+    <button id="downloadButton">Download File</button>
+
+    <!-- JavaScript to handle the download -->
+    <script src="download.js"></script>
+</body>
+</html>
