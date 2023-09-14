@@ -52,7 +52,7 @@ def process_file():  # Run the IPython Notebook
 @app.route('/download', methods=['GET'])
 def download_file():
     # Specify the directory where the file is located (outputs directory)
-    file_path = 'C:\\Users\\sayuj\\OneDrive\\Documents\\SDV project\\outputs\\synthetic1_data.csv' 
+    file_path = os.path.join('outputs','synthetic1_data.csv')
 
     # so the output file name will always remian same
     # Specify the full path to the file
