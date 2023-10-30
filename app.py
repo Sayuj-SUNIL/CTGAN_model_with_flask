@@ -42,12 +42,16 @@ def upload_file():
     return 'File successfully uploaded'
 
 @app.route('/processing', methods=['GET'])
-
 def process_file():  # Run the IPython Notebook  
     notebook_path = 'ctgansynthesis.ipynb'
     cmd = f"jupyter nbconvert --to notebook --execute {notebook_path} --output {notebook_path}"
     subprocess.run(cmd, shell=True)
     return "File Processed"
+
+@app.route('/display',methods = ['GET'])
+def display_file():
+    return 0
+
 
 @app.route('/download', methods=['GET'])
 def download_file():
